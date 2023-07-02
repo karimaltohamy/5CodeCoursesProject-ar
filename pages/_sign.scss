@@ -1,0 +1,206 @@
+$dark-color: #191919;
+$secound-dark: #181f44;
+$main-color: #722ffb;
+
+// start sign_section
+.sign_section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .content {
+    position: relative;
+    z-index: 999;
+
+    .title {
+      font-size: 40px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .desc {
+      color: gray;
+      text-align: center;
+    }
+
+    form {
+      box-shadow: 3px 12px 10px 0px rgb(228 228 228);
+      border-radius: 10px;
+      padding: 30px;
+      margin: auto;
+      margin-top: 60px;
+      width: 520px;
+      position: relative;
+      background-color: white;
+
+      h3 {
+        color: $main-color;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .input_item {
+        margin-bottom: 20px;
+
+        label {
+          font-size: 19px;
+          font-weight: 600;
+          margin-bottom: 8px;
+        }
+
+        .input {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 12px 14px;
+          background-color: rgb(242 242 242);
+          border-radius: 3px;
+
+          input {
+            width: 100%;
+            border: none;
+            outline: none;
+            background-color: transparent;
+          }
+        }
+      }
+
+      .btn_sign {
+        padding: 8px 20px;
+        width: 100%;
+        background-color: $main-color;
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 7px;
+      }
+
+      .text {
+        margin-top: 20px;
+        color: gray;
+        text-align: center;
+
+        a {
+          color: $main-color !important;
+        }
+      }
+    }
+
+    .shap_img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+
+      img {
+        opacity: 0.1;
+        width: 500px;
+      }
+    }
+
+    .man1 {
+      position: absolute;
+      top: 50%;
+      left: -95px;
+
+      img {
+        width: 100px;
+      }
+    }
+
+    .man2 {
+      position: absolute;
+      top: 20%;
+      right: -115px;
+
+      img {
+        width: 100px;
+      }
+    }
+
+    .circle {
+      position: absolute;
+      top: -80px;
+      right: -70px;
+      animation: signCircle 5s linear 0s infinite alternate;
+    }
+
+    .dots {
+      position: absolute;
+      top: -90px;
+      left: -50px;
+      animation: signmove 3s linear 0s infinite alternate;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sign_section {
+    height: 80vh;
+
+    .content {
+      width: 500px;
+      margin: 0 15px;
+
+      .title {
+        font-size: 20px;
+        margin-bottom: 0;
+      }
+
+      .desc {
+        font-size: 14px;
+      }
+
+      form {
+        width: 100%;
+        padding: 15px;
+        margin-top: 30px;
+
+        .input_item {
+          margin-bottom: 10px;
+
+          label {
+            font-size: 15px;
+          }
+
+          .input {
+            padding: 8px;
+            font-size: 14px;
+          }
+        }
+
+        .btn_sign {
+          padding: 6px 15px;
+          font-size: 14px;
+        }
+
+        .text {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+// end sign_section
+
+// animation
+@keyframes signCircle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes signmove {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
