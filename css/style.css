@@ -590,6 +590,7 @@ footer .copy_right {
           flex-direction: column;
   gap: 5px;
   margin-bottom: 15px;
+  position: relative;
 }
 .popup_add form .input_item label,
 .popup_update form .input_item label {
@@ -611,6 +612,14 @@ footer .copy_right {
 .popup_add form .input_item textarea,
 .popup_update form .input_item textarea {
   height: 100px;
+}
+.popup_add form .input_item .error,
+.popup_update form .input_item .error {
+  position: absolute;
+  font-size: 13px;
+  color: red;
+  top: 0;
+  left: 0;
 }
 .popup_add form .input_file,
 .popup_update form .input_file {
