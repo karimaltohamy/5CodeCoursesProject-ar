@@ -755,15 +755,21 @@
     <div class="overflow"></div>
     <div class="popup_add">
       <div class="head">
-         <h3>تسجيل <i class="fa-regular fa-user"></i></h4>
         <i class="fa-regular fa-circle-xmark btn_close_add"></i>
+      </div>
+
+      <div class="text">
+        <h3 class="title">شراء الكورس</h3>
+        <div class="desc">
+          الرسم والطباعة هذا جيدًا ، في الواقع ، جميع المهن التي تتعامل
+        </div>
       </div>
 
       <form action="">
         <div class="row">
           <div class="col-12 col-md-6">
             <div class="input_item">
-              <span class="error">error Message</span>
+              <span class="error"> رسالة خطأ </span>
               <label for="">الاسم</label>
               <input type="text" placeholder="" />
             </div>
@@ -788,7 +794,7 @@
           </div>
           <div class="col-12 col-md-6">
             <div class="input_item">
-              <label for="">السن</label>
+              <label for="">العمر</label>
               <input type="text" placeholder="" />
             </div>
           </div>
@@ -805,8 +811,29 @@
             </div>
           </div>
         </div>
-        <button class="btn_add">تسجيل</button>
-        </form>
+        <div class="hr"></div>
+        <div class="inputs_radios_method">
+          <div class="input_radio_method" data-method="visa">
+            <label for="visa">فيزا \ فوري</label>
+            <input type="radio" id="visa" name="method-payment" />
+          </div>
+
+          <div class="input_radio_method" data-method="cash">
+            <label for="cash">فودافون كاش</label>
+            <input type="radio" id="cash" name="method-payment" />
+          </div>
+        </div>
+
+        <div class="input_item input_cash">
+          <label for="">رقم محفظه فودافون كاش</label>
+          <input type="number" placeholder="01xxxxxxx" />
+        </div>
+
+        <button class="btn_add">شراء الكورس</button>
+      </form>
+      <div class="shap1">
+        <img src="images/shape1-form.png" alt="" />
+      </div>
     </div>
     <!-- end popup Add -->
 
